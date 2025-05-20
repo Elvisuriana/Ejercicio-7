@@ -1,54 +1,21 @@
-// Array para almacenar la facturas
-let facturas=[];
+// funcion para mostrar la tabla de multiplicar
+function mostrarTablaMultiplicar(numero) {
+    console.log('tabla de multiplicar del ${numero}:');
+    for (let i = 0; i <= 10; i++) {
+        console.log ('${numero} x ${i} = ${numero * i}');
 
-//funcion para añadir una factura(){
-let codigoArticulo=
-parseInt(prompt("indroduce el codigo del articulo:"));
-let candidadVendida=
-parseFloat(prompt("Introduce la cantidad vendida en litros:"));
-let precioPorLitro=
-parseFloat(prompt("indroce el precio por litros:"));
 
-it (isNaN(codigoArticulo)||
-isNaN(candidadVendida)||
-isNaN(precioPorLitro)||
-candidadVendida<=0||
-precioPorLitro<=0)
-    alert("porfavor,introducevaloresnumericosvalidos.ypreciodebesermayoresacero.");
-    return;
 
-    let factura={
-        codigoArticulo:codigoArticulo,
-        candidadVendida:
-        candidadVendida,
-        precioPorLitro:precioPorLitro,
-        totalFactura:candidadVendida*
-        precioPorLitro
 
-    //funcion para calcular la facturacion total
+    }
+}
+
+// pedir al usuario un numero entre 0 y 10
+const numero = parseInt(prompt("introduce un numero entre 0 y 10:"));
+// validar que el numero este en el rango correcto
+if (numero >= 0 && numero <=10) {
+    mostrarTablaMultiplicar(numero);
+} else {
+    console.log("el numero debe estar entre 0 y 10.");
     
-
-    }
-    let total=0;
-    for(let i=0;i<facturas.length;i++){
-        total+facturas[i].totalFactura;
-        returntotal;
-
-    }
-//funcion para calcular la cantidad de litros vendidos de articulo especifico
-Function
-calcularlitrosVendidosArticulos(codigoArticulo)
-    let totalLitros=0;
-    for(let i=0;i<facturas.length;i++){
-        if(facturas[i].codigoArticulo===
-            codigoArticulo){
-                totalLitros+=
-                facturas[i].candidadVendida;
-
-            }
-    }
-returntotalLitros;
-//funcion para contar la facturas con un total a 600
-Function
-contarfacturasMayores600()
-    let contador
+}
